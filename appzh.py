@@ -41,6 +41,4 @@ def create_app():
         print("prediction: ", prediction)
 
         # Return output
-        return jsonify((str(prediction))
-if  __name__ == "__main__" 
-    app.run() 
+        return jsonify((str(prediction)) 
