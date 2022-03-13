@@ -2,6 +2,7 @@ certifi
 chardet
 click
 Flask
+gunicorn
 flask_socketio
 idna
 imbalanced-learn
