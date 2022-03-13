@@ -40,5 +40,5 @@ def create_app():
         prediction = "The client has a " + str(round(prediction*100,2)) + "% risk of defaulting on their loan."
         print("prediction: ", prediction)
 
-# Return output
-return jsonify((str(prediction)) 
+    # Return output
+    return jsonify((str(prediction)) 
