@@ -7,7 +7,7 @@ the results in JSON format.
 
 # Import libraries
 import numpy as np
-from flask import Flask, request, jsonify, render_template,Responce
+from flask import Flask, request, jsonify, Responce
 from flask_socketio  import SocketIO
 import pickle
 import pandas as pd
