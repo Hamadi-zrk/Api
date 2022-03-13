@@ -22,7 +22,7 @@ def load_models():
 @app.route('/predict', methods=['POST']) 
 def predict():
     # parse input features from request
-     request_json = request.get_json()
+    request_json = request.get_json()
     df = pd.json_normalize(request_json)
  
     # load model
