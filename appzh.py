@@ -43,4 +43,4 @@ def create_app():
         # Return output
         return jsonify((str(prediction))
         
-     return app
+     run app
