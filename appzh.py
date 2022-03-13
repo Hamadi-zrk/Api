@@ -21,14 +21,14 @@ def create_app():
         return model
 
     @app.route("/")
-        def hello():
+    def hello():
         """
         Ping the API.
         """
         return jsonify({"text":"Prediction de api-hamadi..." })
 
     @app.route('/predict', methods=['POST'])
-        def predict():
+    def predict():
         # parse input features from request
         request_json = request.get_json()
         df = pd.json_normalize(request_json)
