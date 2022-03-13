@@ -40,4 +40,4 @@ def predict():
 
     # Return output
     return jsonify((str(prediction))
-app.run(debug=True)
+Flask_app.run(debug=True)
