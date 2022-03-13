@@ -8,7 +8,7 @@ the results in JSON format.
 # Import libraries
 import numpy as np
 from flask import Flask, request, jsonify
-from flask_socketio  import SocketIO
+
 import pickle
 import pandas as pd
 import json
