@@ -20,7 +20,7 @@ def create_app():
         model = pickle.load(open('models/LRModel2.obj','rb'))
         return model
 
-   @app.route("/")
+    @app.route("/")
         def hello():
         """
         Ping the API.
