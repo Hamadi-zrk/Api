@@ -3,8 +3,8 @@ import pandas as pd
 import json
 
 # URL
-#url = 'http://127.0.0.1:5000/predict'
- url = 'https://home-credit-risk.herokuapp.com/predict'
+url = 'http://127.0.0.1:5000/predict'
+#url = 'https://home-credit-risk.herokuapp.com/predict'
 
 # User ID to be provided in input form. Currently hard-coded to test.
 user_id = 100004

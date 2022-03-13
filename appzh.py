@@ -7,8 +7,7 @@ the results in JSON format.
 
 # Import libraries
 import numpy as np
-from flask import Flask, request, jsonify
-
+from flask import Flask, request, jsonify,Responce
 import pickle
 import pandas as pd
 import json
@@ -40,7 +39,7 @@ def predict():
     print("prediction: ", prediction)
 
     # Return output
-    return jsonify(prediction)
-
+    return jsonify(json.dumps(str(prediction)))
+    
 if __name__ == '__main__':
-   app.run()
+    app.run(debug=True)
