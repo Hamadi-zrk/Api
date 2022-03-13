@@ -12,32 +12,35 @@ import pickle
 import pandas as pd
 import json
 
-app = Flask(__name__)
 
-def load_models():
-    model = pickle.load(open('models/LRModel2.obj','rb'))
-    return model
+def create_app():
+    app = Flask(__name__)
 
-@app.route("/")
-def hello():
-    """
-    Ping the API.
-    """
-    return jsonify({"text":"Hello, the API is up and running..." })
+    def load_models():
+        model = pickle.load(open('models/LRModel2.obj','rb'))
+        return model
 
-@app.route('/predict', methods=['POST'])
-def predict():
-    # parse input features from request
-    request_json = request.get_json()
-    df = pd.json_normalize(request_json)
+   @app.route("/")
+        def hello():
+        """
+        Ping the API.
+        """
+        return jsonify({"text":"Prediction de api-hamadi..." })
+
+    @app.route('/predict', methods=['POST'])
+        def predict():
+        # parse input features from request
+        request_json = request.get_json()
+        df = pd.json_normalize(request_json)
  
-    # load model
-    model = load_models()
-    prediction = model.predict_proba(df)[:, 1][0]
-    # Format prediction in percentage with 2 decimal points
-    prediction = "The client has a " + str(round(prediction*100,2)) + "% risk of defaulting on their loan."
-    print("prediction: ", prediction)
+        # load model
+        model = load_models()
+        prediction = model.predict_proba(df)[:, 1][0]
+        # Format prediction in percentage with 2 decimal points
+        prediction = "The client has a " + str(round(prediction*100,2)) + "% risk of defaulting on their loan."
+        print("prediction: ", prediction)
 
-    # Return output
-    return jsonify((str(prediction))
-Flask_app.run(debug=True)
+        # Return output
+        return jsonify((str(prediction))
+        
+        return app
