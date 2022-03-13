@@ -39,7 +39,7 @@ def predict():
     print("prediction: ", prediction)
 
     # Return output
-    return jsonify(json.dumps(str(prediction)))
+    return jsonify(prediction)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
