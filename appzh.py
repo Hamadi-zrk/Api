@@ -14,7 +14,7 @@ import pandas as pd
 import json
 
 app = Flask(__name__)
-socketio=SocketIO(app)
+
 def load_models():
     model = pickle.load(open('models/LRModel2.obj','rb'))
     return model
@@ -43,5 +43,4 @@ def predict():
     return jsonify(prediction)
 
 if __name__ == '__main__':
-    socketio.run(app)
-    python3_init_py
+   app.run()
