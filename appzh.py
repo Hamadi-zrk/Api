@@ -42,6 +42,5 @@ def create_app():
 
         # Return output
         return jsonify((str(prediction))
-        
-    if  __name__ == "__main__" 
-        app.run() 
+if  __name__ == "__main__" 
+    app.run() 
