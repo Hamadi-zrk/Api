@@ -1,1 +1,1 @@
-web: gunicorn appzh.py:app
+web: streamlit run --server.enableCORS false --server.port $PORT appzh.py
