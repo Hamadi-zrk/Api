@@ -13,7 +13,7 @@ import pandas as pd
 import json
 
 app = Flask(__name__)
-socketio = SocketIO(app)
+
 def load_models():
     model = pickle.load(open('models/LRModel2.obj','rb'))
     return model
