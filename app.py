@@ -7,13 +7,13 @@ the results in JSON format.
 
 # Import libraries
 import numpy as np
-from flask import Flask, request, jsonify, Response
+from flask import Flask, request, jsonify, Response,socketio
 import pickle
 import pandas as pd
 import json
 
 app = Flask(__name__)
-
+soke
 def load_models():
     model = pickle.load(open('models/LRModel2.obj','rb'))
     return model
