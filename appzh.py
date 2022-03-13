@@ -43,4 +43,6 @@ def create_app():
         # Return output
         return jsonify((str(prediction))
         
-     run app
+     @app.route("/")
+     def index():
+        return (str(prediction))
