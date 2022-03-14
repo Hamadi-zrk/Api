@@ -20,8 +20,8 @@ def load_models():
 
 @app.route("/")
 def hello():
-    """        Ping the API.       """
-    return jsonify({"Hello, the API is up and running...":str((prediction)) })
+    """ Ping the API. """
+    return jsonify("Hello, the API is up and running..." )
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -37,7 +37,7 @@ def predict():
     print("prediction: ", prediction)
 
     # Return output
-    return jsonify(str(prediction))
+    return jsonify(json.dumps(str(prediction))
 
 if __name__ == '__main__':
     app.run(debug=True)
