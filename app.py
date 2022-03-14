@@ -23,19 +23,7 @@ def hello():
     """ 
     Ping the API. 
     """
-    return jsonify({
-
-
-
-
-
-
-                                         "Statut  :   API  ON    ": 
-
-
-                                    "  Bonjour , l'API est operationelle !!!"
-                                   " Cette Api est developpé par Hamadi zarrouk"
-                     "dans le cadre du projet 7 du parcours  Data-Science d'openclassrooms" })
+    return jsonify({"Statut:API>>>ON"  :  "Bonjour , l'API est operationelle !!!  Cette Api est conç par Hamadi zarrouk dans le cadre du projet 7 du parcours  Data-Science d'Openclassrooms" })
 
 @app.route('/predict', methods=['POST'])
 def predict():
