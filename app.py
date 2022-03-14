@@ -23,7 +23,7 @@ def hello():
     """ 
     Ping the API. 
     """
-    return jsonify({"text":"Hello, the API is up and running..." })
+    return jsonify({"Hello, the API is up and running..." })
 
 @app.route('/predict', methods=['POST'])
 def predict():

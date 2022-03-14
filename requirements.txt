@@ -20,8 +20,7 @@ sklearn
 threadpoolctl
 urllib3
 Werkzeug
-streamlit
-matplotlib
-seaborn
-lime
-plotly
+
+
+
+
